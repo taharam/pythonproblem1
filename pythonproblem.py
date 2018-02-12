@@ -3,7 +3,6 @@ import random
 import string
 import csv
 import calendar
-import datetime
 import time
 
 # Write a python code to create a data set and write it down to csv file.
@@ -97,8 +96,7 @@ for x in range (10):
 
     wr.writerow(list_col)
     del list_col[:]
-# iterate this for 1 million times
+
     time2 = time.timer()
     time = time2-time1
     print ('the time taken for the program to create 1 Million records is' + str(time))
-# Step 2 Write it to a file
