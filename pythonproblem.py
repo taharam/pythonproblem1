@@ -6,7 +6,7 @@ import calendar
 import time
 
 # Write a python code to create a data set and write it down to csv file.
-# Step 1 Create a dataset consists of 1 million rows
+# Step 1 Create a dataset consists of 10 rows
 # 1. Create a csv file and write it down
 rt_file = open("random_fuse_sub.csv", 'w')
 wr = csv.writer(rt_file, delimiter='|')
@@ -20,7 +20,7 @@ for x in range (10):
     list_col.append(uniqueid)
 
     # add a country
-    country_list = {'JAP': 'Japanese', 'KOR': 'Korean', 'IND': 'Hindi', 'CHI': 'Cantonese', 'USA': 'English',
+    country_list = {'JAP': 'Japanese', 'KOR': 'Korean', 'IND': 'Hindi', 'CHI': 'Chinese', 'USA': 'English',
                     'FRA': 'French', 'GER': 'German', 'AUS': 'English'}
     country_name = random.choice(list(country_list.keys()))
     list_col.append(country_name)
@@ -35,7 +35,7 @@ for x in range (10):
     language = country_list.get(country_name)
     list_col.append(language)
 
-    # add a random birth date
+    # add a random birth date between 1991/8 - 1997/2
     year = random.randrange(1991,1997,1)
     if year == 1991:
         month_list = ['Aug','Sep','Oct','Nov','Dec']
@@ -99,4 +99,4 @@ for x in range (10):
 
     time2 = time.timer()
     time = time2-time1
-    print ('the time taken for the program to create 1 Million records is' + str(time))
+    print ('the time taken for the program to create 10 records is' + str(time))
